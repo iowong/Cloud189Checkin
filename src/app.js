@@ -216,21 +216,14 @@ const pushServerChan = (title, desp) => {
     title,
     desp,
   };
-  superagent.post(`https://sctapi.ftqq.com/${serverChan.sendKey}.send`)
-    .type('form')
-    .send(data)
-    .end((err, res) => {
-      if (err) {
-        logger.error(`推送失败:${JSON.stringify(err)}`);
-        return;
-      }
-      const json = JSON.parse(res.text);
-      if (json.code !== 0) {
-        logger.error(`推送失败:${JSON.stringify(json)}`);
-      } else {
-        logger.info('推送成功');
-      }
-    });
+superagent.get("https://api.day.app/wXt6nakVkRuXeRsJYzvjkH/".title."/".desp.")
+    .end( (err,res)=> {
+        if (err) {
+            console.log("出错：" + err);
+        } else {
+            console.log(res.text);
+        }
+    } );
 };
 
 // 开始执行程序
