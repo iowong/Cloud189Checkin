@@ -216,7 +216,7 @@ const pushServerChan = (title, desp) => {
     title,
     desp,
   };
-superagent.get("https://api.day.app/wXt6nakVkRuXeRsJYzvjkH/".desp)
+superagent.get("https://api.day.app/wXt6nakVkRuXeRsJYzvjkH/".content)
     .end( (err,res)=> {
         if (err) {
             console.log("出错：" + err);
