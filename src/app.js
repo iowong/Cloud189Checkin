@@ -216,7 +216,7 @@ const pushServerChan = (title, body) => {
     title,
     body,
   };
-  superagent.post(`https://api.day.app/${serverChan.sendKey}/`)
+  superagent.post(`https://api.day.app/${serverChan.sendKey}`)
     .type('form')
     .send(data)
     .end((err, res) => {
